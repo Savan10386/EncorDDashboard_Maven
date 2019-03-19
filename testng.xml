@@ -7,7 +7,6 @@
   <test name="EncorDashboard.TestScripts" preserve-order="true">
     <classes>
       <class name="EncorDashboard.TestScripts.UserAccess"/>
-      <class name="EncorDashboard.TestScripts.VerifyDashboardData"/>
       <class name="EncorDashboard.TestScripts.ChangeDashboard"/>
       <class name="EncorDashboard.TestScripts.ScoreCard"/>
       <class name="EncorDashboard.TestScripts.AddDashboard"/>

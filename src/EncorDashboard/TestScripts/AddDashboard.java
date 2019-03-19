@@ -60,7 +60,7 @@ public class AddDashboard
 			      
 			      cd.clickSavebutton(Column7);
 			   			 
-	     Assert.assertEquals(GlobalVariables.oDriver.getTitle(),"Add/Edit Dashboard");			   
+	     Assert.assertEquals(GlobalVariables.oDriver.getTitle(),"Manage Dashboard");			   
 			 
 		}
 		catch (Exception e) {
