@@ -3,6 +3,7 @@
   <groupId>EncorDDashboard_Maven</groupId>
   <artifactId>EncorDDashboard_Maven</artifactId>
   <version>0.0.1-SNAPSHOT</version>
+  <packaging>jar</packaging>
   <build>
    <!-- Source directory configur"testng.xml"ation -->
     <sourceDirectory>C:\Users\Savan\git\EncorDDashboard_Maven\src</sourceDirectory>
@@ -21,6 +22,16 @@
       </testResource>
     </testResources>
      <plugins>
+          <!-- Compiler plugin configures the java version to be usedfor compiling 
+                the code -->
+     <plugin>
+             <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <configuration>
+                    <source>1.8</source>
+                    <target>1.8</target>
+                </configuration>
+            </plugin>
           <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-surefire-plugin</artifactId>
@@ -32,17 +43,6 @@
                  <suiteXmlFiles>
                         <suiteXmlFile>testng.xml</suiteXmlFile>
                     </suiteXmlFiles>
-                </configuration>
-            </plugin>
-            <!-- Compiler plugin configures the java version to be usedfor compiling 
-                the code -->
-
-            <plugin>
-             <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-compiler-plugin</artifactId>
-                <configuration>
-                    <source>1.8</source>
-                    <target>1.8</target>
                 </configuration>
             </plugin>
         </plugins>
