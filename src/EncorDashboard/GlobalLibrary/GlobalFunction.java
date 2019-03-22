@@ -29,9 +29,9 @@ public class GlobalFunction {
 	public static void BrowsersSettings()
 	{
 		//office
-		File file = new File("E:/workspace/EncorD-Dashboard_Maven/chromedriver.exe");
+		//File file = new File("E:/workspace/EncorD-Dashboard_Maven/chromedriver.exe");
 		//home
-		//File file = new File("C:/Users/leomahesh/git/EncorD-Dashboard/Library/chromedriver.exe"); 
+		File file = new File("C:/Users/Savan/git/EncorDDashboard_Maven/chromedriver.exe"); 
 		
 		System.setProperty("webdriver.chrome.driver", file.getAbsolutePath());
  		GlobalVariables.oDriver =  new ChromeDriver();

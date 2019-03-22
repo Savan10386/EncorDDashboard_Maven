@@ -1,12 +1,25 @@
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
- xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
   <groupId>EncorDDashboard_Maven</groupId>
   <artifactId>EncorDDashboard_Maven</artifactId>
   <version>0.0.1-SNAPSHOT</version>
   <build>
         <!-- Source directory configur"testng.xml"ation -->
-        <sourceDirectory>src</sourceDirectory>
+    <sourceDirectory>C:\Users\Savan\git\EncorDDashboard_Maven\src</sourceDirectory>
+    <scriptSourceDirectory>C:\Users\Savan\git\EncorDDashboard_Maven\src\EncorDashboard\UserInterface</scriptSourceDirectory>
+    <testSourceDirectory>C:\Users\Savan\git\EncorDDashboard_Maven\src\EncorDashboard\TestScripts</testSourceDirectory>
+    <outputDirectory>C:\Users\Savan\git\EncorDDashboard_Maven\target</outputDirectory>
+    <testOutputDirectory>C:\Users\Savan\git\EncorDDashboard_Maven\target\test-classes</testOutputDirectory>
+    <resources>
+      <resource>
+        <directory>C:\Users\Savan\git\EncorDDashboard_Maven\src\EncorDashboard\UserInterface</directory>
+      </resource>
+    </resources>
+    <testResources>
+      <testResource>
+        <directory>C:\Users\Savan\git\EncorDDashboard_Maven\src\EncorDashboard\TestScripts</directory>
+      </testResource>
+    </testResources>
         <plugins>
         <plugin>
             <groupId>org.apache.maven.plugins</groupId>
@@ -15,6 +28,21 @@
                 <source>1.8</source>
                 <target>1.8</target>
             </configuration>
+             <executions>
+      <execution>
+         <phase>package</phase>
+         <configuration>
+           <descriptorRefs>
+             <descriptorRef>jar-with-dependencies</descriptorRef>
+          </descriptorRefs>
+          <archive>
+            <manifest>
+              <mainClass>C:\Users\Savan\git\EncorDDashboard_Maven\src\EncorDashboard\TestScripts\AddDashboard</mainClass>
+            </manifest>
+          </archive>
+        </configuration>
+     </execution>
+  </executions>     
         </plugin>
          <!-- Following plugin executes the testng tests -->
             <plugin>
@@ -32,13 +60,6 @@
             </plugin>
             <!-- Compiler plugin configures the java version to be usedfor compiling 
                 the code -->
-            <plugin>
-                <artifactId>maven-compiler-plugin</artifactId>
-                <configuration>
-                    <source>1.8</source>
-                    <target>1.8</target>
-                </configuration>
-            </plugin>
         </plugins>
     </build>
   <dependencies>
