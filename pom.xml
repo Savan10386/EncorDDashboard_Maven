@@ -4,6 +4,7 @@
   <artifactId>EncorDDashboard_Maven</artifactId>
   <version>0.0.1-SNAPSHOT</version>
   <build>
+<<<<<<< HEAD
         <!-- Source directory configur"testng.xml"ation -->
     <sourceDirectory>C:\Users\Savan\git\EncorDDashboard_Maven\src</sourceDirectory>
     <scriptSourceDirectory>C:\Users\Savan\git\EncorDDashboard_Maven\src\EncorDashboard\UserInterface</scriptSourceDirectory>
@@ -20,6 +21,27 @@
         <directory>C:\Users\Savan\git\EncorDDashboard_Maven\src\EncorDashboard\TestScripts</directory>
       </testResource>
     </testResources>
+=======
+      <sourceDirectory>E:\workspace\EncorD-Dashboard_Maven\src</sourceDirectory>
+    <scriptSourceDirectory>E:\workspace\EncorD-Dashboard_Maven\src\EncorDashboard\UserInterface</scriptSourceDirectory>
+    <testSourceDirectory>E:\workspace\EncorD-Dashboard_Maven\src\EncorDashboard\TestScripts</testSourceDirectory>
+    <outputDirectory>E:\workspace\EncorD-Dashboard_Maven\target\classes</outputDirectory>
+    <testOutputDirectory>E:\workspace\EncorD-Dashboard_Maven\target\test-classes</testOutputDirectory>
+    <resources>
+      <resource>
+        <directory>E:\workspace\EncorD-Dashboard_Maven\src\EncorDashboard\UserInterface</directory>
+      </resource>
+    </resources>
+    <testResources>
+      <testResource>
+        <directory>E:\workspace\EncorD-Dashboard_Maven\src\EncorDashboard\TestScripts</directory>
+      </testResource>
+    </testResources>
+    <directory>E:\workspace\EncorD-Dashboard_Maven\target</directory>
+    <finalName>EncorDDashboard_Maven-0.0.1-SNAPSHOT</finalName>
+      <!-- Source directory configur"testng.xml"ation -->
+       <!--   <sourceDirectory>src</sourceDirectory> -->
+>>>>>>> branch 'master' of https://github.com/Savan10386/EncorDDashboard_Maven.git
         <plugins>
         <plugin>
             <groupId>org.apache.maven.plugins</groupId>
@@ -28,14 +50,14 @@
                 <source>1.8</source>
                 <target>1.8</target>
             </configuration>
-        </plugin>
-         <!-- Following plugin executes the testng tests -->
+        </plugin>  
+            <!-- Following plugin executes the testng tests -->
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-surefire-plugin</artifactId>
                 <version>3.0.0-M3</version>
                 <configuration>
-                <!---add below line-->
+                <skipTests>false</skipTests>
                 <testFailureIgnore>true</testFailureIgnore>
                 <!-- Suite testng xml file to consider for test execution -->
                  <suiteXmlFiles>
@@ -45,6 +67,17 @@
             </plugin>
             <!-- Compiler plugin configures the java version to be usedfor compiling 
                 the code -->
+<<<<<<< HEAD
+=======
+            <plugin>
+             <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <configuration>
+                    <source>1.8</source>
+                    <target>1.8</target>
+                </configuration>
+            </plugin>
+>>>>>>> branch 'master' of https://github.com/Savan10386/EncorDDashboard_Maven.git
         </plugins>
     </build>
   <dependencies>
